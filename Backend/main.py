@@ -6,6 +6,8 @@ import os
 import random
 
 app = FastAPI()
+port = int(os.environ.get("PORT", 8000))  # Use Railway's dynamic port
+uvicorn.run(app, host="0.0.0.0", port=port)
 
 app.add_middleware(
     CORSMiddleware,
@@ -17,6 +19,7 @@ app.add_middleware(
 
 # Serve images from the /images folder
 app.mount("/images", StaticFiles(directory="images"), name="images")
+
 
 @app.get("/sarees")
 def get_sarees():
