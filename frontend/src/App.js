@@ -1,66 +1,64 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
-import logo from "./sriaara-logo.jpg";
+import logo from "./sriaara-logo.jpg"; // Ensure this path is correct
 import { FaInstagram } from "react-icons/fa";
 
 function App() {
   const [sarees, setSarees] = useState([]);
 
   useEffect(() => {
-<<<<<<< HEAD
     const API_BASE = process.env.REACT_APP_API || "http://localhost:8000/sarees";
-=======
-    const API_BASE = process.env.REACT_APP_API || "https://your-backend-host.com";
->>>>>>> e1b04f8 (Updated package.json for deployment and connected App.js to backend with product logic)
     fetch(`${API_BASE}/sarees`)
       .then((res) => res.json())
       .then((data) => {
-        console.log("Fetched sarees:", data);  // ADD THIS
+        console.log("Fetched sarees:", data);
         setSarees(data);
       })
       .catch((err) => console.error("Error fetching sarees:", err));
   }, []);
- 
+
   return (
     <div className="App">
-      <nav className="navbar">
-        <div className="nav-left">
-          <img src={logo} alt="Sriaara Logo" className="logo" />
-          <span className="brand-name">Sriaara</span>
-        </div>
+      <div className="ribbon">
+        <img src={logo} alt="Sriaara Logo" className="logo" />
         <a
           href="https://www.instagram.com/your_instagram_username"
           target="_blank"
           rel="noopener noreferrer"
-          className="insta-link"
+          className="insta-button"
         >
           <FaInstagram />
           Follow Us
         </a>
-      </nav>
+      </div>
 
-      <div className="gallery">
+      <div className="saree-list">
         {sarees.length > 0 ? (
           sarees.map((saree, idx) => (
-            <div key={idx} className="card">
-              <img
-                src={`http://127.0.0.1:8000${saree.image}`}
-                alt={saree.name}
-                className="saree-image"
-              />
-              <p className="saree-name">{saree.name}</p>
-              {saree.available ? (
-                <a
-                  href={`https://wa.me/919999999999?text=I%20am%20interested%20in%20the%20${encodeURIComponent(saree.name)}%20saree`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="whatsapp-button"
-                >
-                  Buy on WhatsApp
-                </a>
-              ) : (
-                <p className="sold-out">Sold Out</p>
-              )}
+            <div key={idx} className="saree-item">
+              <div className="saree-image-container">
+                <img
+                  src={`http://127.0.0.1:8000${saree.image}`}
+                  alt={saree.name}
+                />
+              </div>
+              <div className="saree-details">
+                <h3 className="saree-name">{saree.name}</h3>
+                {saree.available ? (
+                  <a
+                    href={`https://wa.me/919999999999?text=I%20am%20interested%20in%20the%20${encodeURIComponent(
+                      saree.name
+                    )}%20saree`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="whatsapp-button"
+                  >
+                    Buy on WhatsApp
+                  </a>
+                ) : (
+                  <p className="sold-out">Sold Out</p>
+                )}
+              </div>
             </div>
           ))
         ) : (
