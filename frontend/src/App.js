@@ -7,7 +7,11 @@ function App() {
   const [sarees, setSarees] = useState([]);
 
   useEffect(() => {
+<<<<<<< HEAD
     const API_BASE = process.env.REACT_APP_API || "http://localhost:8000/sarees";
+=======
+    const API_BASE = process.env.REACT_APP_API || "https://your-backend-host.com";
+>>>>>>> e1b04f8 (Updated package.json for deployment and connected App.js to backend with product logic)
     fetch(`${API_BASE}/sarees`)
       .then((res) => res.json())
       .then((data) => {

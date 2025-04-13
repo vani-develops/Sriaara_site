@@ -19,7 +19,11 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "gh-pages": "^6.3.0"
+=======
+    "gh-pages": "^6.1.0"
+>>>>>>> e1b04f8 (Updated package.json for deployment and connected App.js to backend with product logic)
   },
   "eslintConfig": {
     "extends": [
