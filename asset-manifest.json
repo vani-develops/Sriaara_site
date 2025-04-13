@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/sriaara_site/static/css/main.55451f23.css",
-    "main.js": "/sriaara_site/static/js/main.511eec1e.js",
+    "main.css": "/sriaara_site/static/css/main.c7996500.css",
+    "main.js": "/sriaara_site/static/js/main.fbea4ddb.js",
     "static/js/488.e75445ad.chunk.js": "/sriaara_site/static/js/488.e75445ad.chunk.js",
     "static/media/sriaara-logo.jpg": "/sriaara_site/static/media/sriaara-logo.15409debcbed5bc34339.jpg",
     "index.html": "/sriaara_site/index.html",
-    "main.55451f23.css.map": "/sriaara_site/static/css/main.55451f23.css.map",
-    "main.511eec1e.js.map": "/sriaara_site/static/js/main.511eec1e.js.map",
+    "main.c7996500.css.map": "/sriaara_site/static/css/main.c7996500.css.map",
+    "main.fbea4ddb.js.map": "/sriaara_site/static/js/main.fbea4ddb.js.map",
     "488.e75445ad.chunk.js.map": "/sriaara_site/static/js/488.e75445ad.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.55451f23.css",
-    "static/js/main.511eec1e.js"
+    "static/css/main.c7996500.css",
+    "static/js/main.fbea4ddb.js"
   ]
 }
