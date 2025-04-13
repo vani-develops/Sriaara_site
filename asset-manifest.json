@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/sriaara-site/static/css/main.278c9e43.css",
-    "main.js": "/sriaara-site/static/js/main.f70e9ea1.js",
-    "static/js/488.e75445ad.chunk.js": "/sriaara-site/static/js/488.e75445ad.chunk.js",
-    "static/media/sriaara-logo.jpg": "/sriaara-site/static/media/sriaara-logo.15409debcbed5bc34339.jpg",
-    "index.html": "/sriaara-site/index.html",
-    "main.278c9e43.css.map": "/sriaara-site/static/css/main.278c9e43.css.map",
-    "main.f70e9ea1.js.map": "/sriaara-site/static/js/main.f70e9ea1.js.map",
-    "488.e75445ad.chunk.js.map": "/sriaara-site/static/js/488.e75445ad.chunk.js.map"
+    "main.css": "/sriaara_site/static/css/main.278c9e43.css",
+    "main.js": "/sriaara_site/static/js/main.886f86f4.js",
+    "static/js/488.e75445ad.chunk.js": "/sriaara_site/static/js/488.e75445ad.chunk.js",
+    "static/media/sriaara-logo.jpg": "/sriaara_site/static/media/sriaara-logo.15409debcbed5bc34339.jpg",
+    "index.html": "/sriaara_site/index.html",
+    "main.278c9e43.css.map": "/sriaara_site/static/css/main.278c9e43.css.map",
+    "main.886f86f4.js.map": "/sriaara_site/static/js/main.886f86f4.js.map",
+    "488.e75445ad.chunk.js.map": "/sriaara_site/static/js/488.e75445ad.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.278c9e43.css",
-    "static/js/main.f70e9ea1.js"
+    "static/js/main.886f86f4.js"
   ]
 }
