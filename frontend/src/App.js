@@ -7,7 +7,8 @@ function App() {
   const [sarees, setSarees] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/sarees")
+    const API_BASE = process.env.REACT_APP_API || "http://localhost:8000/sarees";
+    fetch(`${API_BASE}/sarees`)
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched sarees:", data);  // ADD THIS

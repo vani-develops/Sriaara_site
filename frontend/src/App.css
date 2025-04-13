@@ -1,148 +1,145 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  background-color: #fefefe;
-  font-family: 'Segoe UI', sans-serif;
-}
-
+/* App container */
 .App {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-top: 80px; /* Space for ribbon */
   text-align: center;
-  padding-top: 100px; /* so content doesn't hide under navbar */
-  color: #333;
-  max-width: 1200px;
-  margin: auto;
+  background-color: #fffdf8;
 }
 
-/* Top ribbon / navbar */
-.navbar {
+/* Fixed top ribbon */
+.ribbon {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  z-index: 1000;
+  height: 60px;
+  background: linear-gradient(90deg, #b07f59, #deaa88);
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px 30px;
-  height: 80px;
-}
-
-.nav-left {
-  display: flex;
   align-items: center;
-  gap: 10px;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
-  height: 50px;
-  width: auto;
+/* Logo */
+.ribbon .logo {
+  height: 45px;
   object-fit: contain;
 }
 
-.brand-name {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #444;
-}
-
-/* Instagram link style */
-.insta-link {
+/* Instagram button */
+.ribbon .insta-button {
+  background-color: #e1306c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
   text-decoration: none;
-  font-weight: 500;
-  color: #d62976;
-  font-size: 1rem;
-  transition: opacity 0.2s ease;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
 }
 
-.insta-link:hover {
-  opacity: 0.7;
+.ribbon .insta-button:hover {
+  background-color: #c1275d;
 }
 
-/* Gallery layout */
-.gallery {
+/* Title */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #5b3a29;
+}
+
+/* Saree grid */
+.saree-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 24px;
-  margin-top: 10px;
+  gap: 30px;
+  padding: 20px;
 }
 
-/* Individual product card */
-.card {
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+/* Individual item */
+.saree-item {
   width: 250px;
-  padding: 16px;
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e0d5ca;
+  border-radius: 12px;
+  padding: 15px;
+  background-color: #fffaf5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
 }
 
-.card:hover {
+.saree-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-.saree-image {
+/* Saree image */
+.saree-item img {
   width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 10px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
 
-.saree-name {
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin: 12px 0 8px;
-  color: #555;
+/* Saree name */
+.saree-item h3 {
+  font-size: 18px;
+  color: #7a4e33;
+  margin-bottom: 10px;
 }
 
-.whatsapp-button {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 10px 15px;
-  background-color: #25D366;
+/* Buttons */
+.saree-item button {
+  background-color: #04160b;
   color: white;
-  border-radius: 6px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: background 0.2s ease;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
 }
 
-.whatsapp-button:hover {
-  background-color: #1ebe5d;
+.saree-item button:hover {
+  background-color: #128c7e;
 }
 
 .sold-out {
-  color: #cc0000;
-  font-weight: bold;
-  font-size: 1rem;
-  margin-top: 10px;
+  background-color: #aaa;
+  cursor: not-allowed;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-  .navbar {
+/* Loading message */
+.loading {
+  font-size: 18px;
+  color: #555;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ribbon {
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    padding: 10px 15px;
+  }
+
+  .ribbon .logo {
+    height: 40px;
+  }
+
+  .saree-list {
     flex-direction: column;
-    height: auto;
-    padding: 15px;
-    text-align: center;
-    gap: 10px;
+    align-items: center;
+    gap: 20px;
   }
 
-  .App {
-    padding-top: 130px;
-  }
-
-  .card {
+  .saree-item {
     width: 90%;
-  }
-
-  .saree-image {
-    height: auto;
-    max-height: 300px;
   }
 }
